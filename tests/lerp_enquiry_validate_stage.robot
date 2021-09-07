@@ -7,15 +7,17 @@ Suite Teardown  RobotTeardown
 *** Test Cases ***
 TC1
     [Tags]      smoke       regression
-    [Documentation]         To check on Accounting
+    [Documentation]         Check if Home page is loaded successful
     Element Should Be Visible  xpath://h3[text()='Home']
 TC2
     [Tags]     regression   test
     [Documentation]         Click and verify CRM link is working
     Click Element   xpath://span[text()='CRM']
     Element Should Be Visible  xpath://h3[text()='CRM']
+    [Documentation]         Click and verify Enquiry link is working
     Click Element   xpath://div[text() = 'Enquiry']
     Element Should Be Visible  xpath://h3[text()='Enquiry']
+    [Documentation]         Clear the existing filers in Enquiry if any
     Click Element   xpath://span[contains(text(),'filter')]
     Click Element   xpath://button[contains(text(),'Clear Filters')]
     Click Button   xpath://button[contains(text(),'Clear Filters')]
