@@ -60,7 +60,7 @@ jobs:
             GH_ACCESS_TOKEN: ${{ github.TOKEN }}
             LERP_PWD: ${{ github.LERP_PWD }}
             LERP_UNMAE: ${{ github.LERP_UNAME }}
-            LERP_URL: ${{ github.LERP_URL }}
+            URL: ${{ github.LERP_URL }}
             REPO_OWNER: ${{ github.REPOSITORY_OwNER }}
             COMMIT_SHA: ${{ github.SHA }}
             REPOSITORY: ${{ env.REPOSITORY_NAME }}
