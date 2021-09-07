@@ -1,5 +1,5 @@
 *** Variables ***
-${URL}      https://qsgb.lmnas.com/
+${URL}      ${{ secrets.LERP_URL }}
 ${Browser}  Chrome
-${useremail}    saravanan.ambi@lmnas.com
-${Password}    Welcome@123
+${useremail}    ${{ secrets.LERP_UNAME }}
+${Password}    ${{ secrets.LERP_PWD }}
