@@ -8,19 +8,17 @@ Suite Teardown  RobotTeardown
 TC1
     [Tags]      smoke       regression
     [Documentation]         To check on Accounting
-    Element Should Be Visible  xpath://h3[text()='Accounting']
+    Element Should Be Visible  xpath://h3[text()='Home']
 TC2
     [Tags]     regression   test
-    [Documentation]         Click and verify support link is working
+    [Documentation]         Click and verify CRM link is working
     Click Element   xpath://span[text()='CRM']
     Element Should Be Visible  xpath://h3[text()='CRM']
     Click Element   xpath://div[text() = 'Enquiry']
-    Set Selenium Implicit Wait      5
+    Element Should Be Visible  xpath://h3[text()='Enquiry']
     Click Element   xpath://span[contains(text(),'filter')]
-    Set Selenium Implicit Wait      10
     Click Element   xpath://button[contains(text(),'Clear Filters')]
     Click Button   xpath://button[contains(text(),'Clear Filters')]
-    Set Selenium Implicit Wait      5
 
 TC3
     [Tags]     test
