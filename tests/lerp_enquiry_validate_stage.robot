@@ -1,7 +1,6 @@
 *** Settings ***
 Library     SeleniumLibrary
 Library     String
-Resource    data/credentials.robot
 Resource    keywords/lerp_keyword.robot
 Suite Setup     RobotSetup
 Suite Teardown  RobotTeardown
