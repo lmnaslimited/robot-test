@@ -1,5 +1,5 @@
 *** Variables ***
 ${URL}      os.eviron['LERP_URL']
 ${Browser}  Chrome
-${useremail}    ${{ secrets.LERP_UNAME }}
-${Password}    ${{ secrets.LERP_PWD }}
+${useremail}    os.eviron['LERP_UNAME]
+${Password}    os.eviron['LERP_PWD']
