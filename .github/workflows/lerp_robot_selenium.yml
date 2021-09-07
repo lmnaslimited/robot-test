@@ -35,7 +35,7 @@ jobs:
             docker run \
               -v ${PWD}/reports:/opt/robotframework/reports:Z \
               -v ${PWD}/tests:/opt/robotframework/tests:Z \
-              -e ROBOT_OPTIONS="--variable DINOSAUR:Achillobator --variable NOT_DINOSAUR:kissa --variable URL:${{ secrets.LERP_URL }} --variable Browser:Chrome --variable useremail:saravanan.ambi@lmnas.com --variable Password:Welcome@123" \
+              -e ROBOT_OPTIONS="--variable URL:${{ secrets.LERP_URL }} --variable BROWSER:Chrome --variable LERP_UNAME:${{ secrets.LERP_UNAME }} --variable LERP_PWD:${{ secrets.LERP_PWD }}" \
               --user $(id -u):$(id -g) \
               ppodgorsek/robot-framework:latest
         # upload test reports as a zip file
