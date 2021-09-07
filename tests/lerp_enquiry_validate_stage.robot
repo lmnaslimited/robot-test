@@ -19,7 +19,7 @@ TC2
     Click Element   xpath://span[contains(text(),'filter')]
     Click Element   xpath://button[contains(text(),'Clear Filters')]
     Click Button   xpath://button[contains(text(),'Clear Filters')]
-    Set Selenium Implicit Wait      5
+    Set Selenium Implicit Wait      10
 
 TC3
     [Tags]     test
