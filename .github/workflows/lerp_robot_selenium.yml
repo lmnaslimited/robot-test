@@ -4,7 +4,7 @@ on:
   push:
     # runs tests for commits pushed to master
     branches:
-      - master
+      - main
     # do not run tests if file README.md changes
     paths-ignore:
       - 'README.md'
@@ -35,7 +35,7 @@ jobs:
             docker run \
               -v ${PWD}/reports:/opt/robotframework/reports:Z \
               -v ${PWD}/tests:/opt/robotframework/tests:Z \
-              -e ROBOT_OPTIONS="--variable DINOSAUR:Achillobator --variable NOT_DINOSAUR:kissa" \
+              -e ROBOT_OPTIONS="--variable DINOSAUR:Achillobator --variable NOT_DINOSAUR:kissa --variable URL:qsgb.lmnas.com" \
               --user $(id -u):$(id -g) \
               ppodgorsek/robot-framework:latest
         # upload test reports as a zip file
@@ -58,6 +58,9 @@ jobs:
           if: ${{ github.event_name == 'push' }}
           env:
             GH_ACCESS_TOKEN: ${{ github.TOKEN }}
+            LERP_PWD: ${{ github.LERP_PWD }}
+            LERP_UNMAE: ${{ github.LERP_UNAME }}
+            URL: ${{ github.LERP_URL }}
             REPO_OWNER: ${{ github.REPOSITORY_OwNER }}
             COMMIT_SHA: ${{ github.SHA }}
             REPOSITORY: ${{ env.REPOSITORY_NAME }}
