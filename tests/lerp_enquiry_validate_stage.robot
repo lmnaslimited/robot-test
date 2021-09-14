@@ -11,19 +11,19 @@ TC1
     Element Should Be Visible  xpath://h3[text()='Home']
 TC2
     [Tags]     regression   test
-    [Documentation]         Click and verify CRM link is working
+    [Documentation]         Navigte to CRM->Enquiry. Clear Existing Filters.
     Click Element   xpath://span[text()='CRM']
     Element Should Be Visible  xpath://h3[text()='CRM']
-    [Documentation]         Click and verify Enquiry link is working
     Click Element   xpath://div[text() = 'Enquiry']
     Element Should Be Visible  xpath://h3[text()='Enquiry']
-    [Documentation]         Clear the existing filers in Enquiry if any
     Click Element   xpath://span[contains(text(),'filter')]
     Click Element   xpath://button[contains(text(),'Clear Filters')]
     Click Button   xpath://button[contains(text(),'Clear Filters')]
+    Set Selenium Implicit Wait      10
 
 TC3
     [Tags]     test
+    [Documentation]        Click A SELVAN Enquiry. Validate Sales Stage to Probabilty. 
     Click Element       xpath://a[@title='A SELVAN']
     Element Should Be Visible   xpath://h3[text()='A SELVAN']
     Scroll Element Into View    xpath://input[@data-target ='Sales Stage']
